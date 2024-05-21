@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoom Check Data</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="background-page">
+      <div class="content">
+        <div class="inputdata">
+          <h1 id="heading">Enter data</h1>
+          <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+            <br />
+            <label for="dobAD">Date of Birth(AD):</label>
+            <input type=text id=dobAD name=dobAD placeholder=yyyy/mm/dd
+            title="Please enter a date in the yyyy/mm/dd format."
+            oninput=formatDate(this) />
+            <br />
+            <label for="dobBS">Date of Birth(BS):</label>
+            <input type=text id=dobBS name=dobBS placeholder=yyyy/mm/dd
+            title="Please enter a date in the yyyy/mm/dd format."
+            oninput=formatDate(this) />
+            <br />
+            <label for="fathername">Father's Name:</label>
+            <input type="text" id="fathername" name="fathername" />
+            <br />
+            <label for="mothername">Mother's Name:</label>
+            <input type="text" id="mothername" name="mothername" />
+            <br />
+            <label for="phonenumber">Phone Number:</label>
+            <input type="text" id="phonenumber" name="phonenumber" />
+            <br />
+            <label for="nextofkin">Next of Kin:</label>
+            <input type="text" id="nextofkin" name="nextofkin" />
+            <br />
+
+            <div class="container">
+              <p class="title">Address in Nepal</p>
+              <select name id="first">
+                <option value>Select Option</option>
+              </select>
+              <select name id="second">
+                <option value>Select Option</option>
+              </select>
+              <select name id="third">
+                <option value>Select Option</option>
+              </select>
+            </div>
+            <div class="belowdata">
+              <label for="wardno">Ward No:</label>
+              <input type="number" id="wardno" name="wardno" />
+              <label for="villagename">Village Name:</label>
+              <input type="text" id="villagename" name="villagename" />
+            </div>
+            <input class="button-1" type="submit" value="Submit" />
+          </form>
+        </div>
+        <div class="preview">
+          <p id="displayData" class="textToCopy"></p>
+
+          <br />
+          <button id="copyButton" onclick="copyToClipboard()">
+            Copy to Clipboard
+          </button>
+          <p id="copiedMessage">Copied!</p>
+        </div>
+      </div>
+    </div>
+   <script src="script.js"></script>
+  </body>
+</html>
